@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function btnEvent(){
+            var changeColor1 = document.getElementById("btn_change");
+            var changeorigin1 = document.getElementById("btn_origin");
+
+            changeColor1.onclick = changeColor;
+            changeorigin1.onclick = changeorigin;
+        }
+
+        
+        function changeColor(){
+            document.body.style.background = "blue";
+        }
+
+        function changeorigin(){
+            document.body.style.background = "white";
+        }
+    </script>
+</head>
+<body onload="btnEvent()">
+    <button id="btn_change">배경색 변경</button>
+    <button id="btn_origin">기본 배경색</button>
+</body>
+</html>
