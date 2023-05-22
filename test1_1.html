@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var img1;
+        
+        function changeImge() {
+            var radioArr = document.getElementsByName("radio");
+            for (var i = 0; i < radioArr.length; i++) {
+                if (radioArr[i].checked) {
+                    img1.src = radioArr[i].value;
+                }
+            }
+        }
+
+        function init(){
+            img1 = document.getElementById("img")
+            img1.src = "imgs/orange.jpg";
+            img1.width = 300;
+            img1.height = 200;
+        }
+
+    </script>
+</head>
+
+<body onload="init()">
+    <form>
+        <input type="radio" value="imgs/apple.jpg" name="radio">APPLE <!-- checked 사용 시 실행 시 체크드가 되어있는 곳에 먼저 체크가 되어있게 만들 수 있음.-->
+        <input type="radio" value="imgs/pear.jpg" name="radio">PEAR
+        <input type="radio" value="imgs/kiwi.jpg" name="radio">KIWI
+        <input type="radio" value="imgs/orange.jpg" name="radio" checked="checked">ORANGE
+        <button id="btn" onclick="changeImge()" type="button">과일선택후 클릭</button>
+        <br>
+        <img id="img">
+    </form>
+</body>
+
+</html>
