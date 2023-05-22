@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // default 이벤트는 태그(요소)마다 갖고 있는 고유한 이벤트
+        function defaultEventTest(){
+            var btn = document.getElementById("btn");
+            btn.onclick = function (){
+                return false; //default event 가 적용되지 않도록 함
+            }
+        }
+    </script>
+</head>
+<body onload="defaultEventTest()">
+    <a id="btn" href="https://naver.com">NAVER</a>
+</body>
+</html>
