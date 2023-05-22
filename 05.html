@@ -10,17 +10,17 @@
         var hEL;
         function nowClock() {
             hEL = document.getElementById("clock");
-            //setInterval(printColck(), 1000);
-            setInterval(function () {
-                var now = new Date();
-                hEL.innerHTML = now.toString();
-            }, 1000);
+            setInterval(printColck, 1000);
+            // setInterval(function () {
+            //     var now = new Date();
+            //     hEL.innerHTML = now.toString();
+            // }, 1000);
         }
 
-        // function printColck() {
-        //     var now = new Date();
-        //     hEL.innerHTML = now.toString();
-        // }
+        function printColck() {
+            var now = new Date();
+            hEL.innerHTML = now.toString();
+        }
     </script>
 </head>
 
